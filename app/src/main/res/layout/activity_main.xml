@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ajitjain.health.MainActivity">
+    <LinearLayout
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:id="@+id/ll1"
+        >
+        <Spinner
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:background="@drawable/white_rounded_rectangle_solid"
+            android:padding="5dp"
+            >
+        </Spinner>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:hint="FirstName"
+                android:id="@+id/f_name"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/white_rounded_rectangle_solid"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/l_name"
+                android:hint="LastName"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/white_rounded_rectangle_solid"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:id="@+id/ll2"
+        >
+        <Button
+            android:id="@+id/bt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:onClick="setDate"
+            android:text="Set Date">
+        </Button>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/button1"
+            android:layout_marginTop="20dp"
+            android:text="Date Selected"
+            android:padding="5dp"
+            android:background="@drawable/white_rounded_rectangle_solid"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="time_selected"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+</LinearLayout>

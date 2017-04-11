@@ -3,6 +3,8 @@ package com.example.ajitjain.health;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -93,12 +95,12 @@ public class MainActivity extends Activity {
         dateView.setText(new StringBuilder().append(day).append("/")
                 .append(month).append("/").append(year));
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void setTime(View view) {
         int hour = timePicker1.getCurrentHour();
         int min = timePicker1.getCurrentMinute();
         showTime(hour, min);
     }
-
     public void showTime(int hour, int min) {
         if (hour == 0) {
             hour += 12;
